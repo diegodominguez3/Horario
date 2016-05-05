@@ -110,3 +110,5 @@ C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\obj\Debug\Horario.WebU
 C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\obj\Debug\Horario.WebUI.pdb
 C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\EntityFramework.dll
 C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\EntityFramework.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\EntityFramework.SqlServer.xml
