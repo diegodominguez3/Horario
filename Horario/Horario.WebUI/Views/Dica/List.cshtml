@@ -1,16 +1,20 @@
 ﻿@model Horario.Domain.Concrete.EFDicaRepository
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "Director de Carrera";
 }
 
 @foreach (var dica in Model.Dicas)
 {
-    <div>
-        <h3>@dica.Nomina</h3>
-        @dica.Fname
-        @dica.Lname
+    <div class="well">
+        <h3>
+            <strong>@dica.Nomina</strong>
+            <span class="pull-right label label-primary">@dica.Fname@dica.Lname</span>
+        </h3>
+        <span class="lead">@dica.email</span>
     </div>
 }
+
+
 
 

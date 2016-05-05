@@ -32,7 +32,8 @@
           <Property Name="Fname" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Lname" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="No_Oficina" Type="char" MaxLength="2" Nullable="false" />
-          <Property Name="Imagen" Type="image" Nullable="false" />
+          <Property Name="Imagen" Type="image" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Horario">
           <Key>
@@ -170,10 +171,11 @@
           <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="No_Oficina" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Carreras" Relationship="Self.FK_Carrera_Dica" FromRole="Dica" ToRole="Carrera" />
           <NavigationProperty Name="Citas" Relationship="Self.FK_Cita_Dica" FromRole="Dica" ToRole="Cita" />
           <NavigationProperty Name="Horarios" Relationship="Self.FK_Horario_Dica" FromRole="Dica" ToRole="Horario" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Horario">
           <Key>
@@ -308,6 +310,7 @@
           <EntitySetMapping Name="Dicas">
             <EntityTypeMapping TypeName="HorarioModel.Dica">
               <MappingFragment StoreEntitySet="Dica">
+                <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="Nomina" ColumnName="Nomina" />
                 <ScalarProperty Name="Fname" ColumnName="Fname" />
                 <ScalarProperty Name="Lname" ColumnName="Lname" />

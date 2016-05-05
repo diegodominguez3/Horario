@@ -27,6 +27,7 @@ namespace Horario.Domain.Entities
         public string Lname { get; set; }
         public string No_Oficina { get; set; }
         public byte[] Imagen { get; set; }
+        public string email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Carrera> Carreras { get; set; }

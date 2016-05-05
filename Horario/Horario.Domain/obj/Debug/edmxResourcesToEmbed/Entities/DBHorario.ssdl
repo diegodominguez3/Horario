@@ -27,7 +27,8 @@
     <Property Name="Fname" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Lname" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="No_Oficina" Type="char" MaxLength="2" Nullable="false" />
-    <Property Name="Imagen" Type="image" Nullable="false" />
+    <Property Name="Imagen" Type="image" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Horario">
     <Key>

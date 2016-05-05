@@ -24,6 +24,7 @@
     <EntitySetMapping Name="Dicas">
       <EntityTypeMapping TypeName="HorarioModel.Dica">
         <MappingFragment StoreEntitySet="Dica">
+          <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="Nomina" ColumnName="Nomina" />
           <ScalarProperty Name="Fname" ColumnName="Fname" />
           <ScalarProperty Name="Lname" ColumnName="Lname" />
