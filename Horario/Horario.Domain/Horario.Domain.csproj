@@ -80,7 +80,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICarreraRepository.cs" />
     <Compile Include="Abstract\IDicaRepository.cs" />
+    <Compile Include="Concrete\EFCarreraRepository.cs" />
     <Compile Include="Concrete\EFDicaRepository.cs" />
     <Compile Include="Entities\Carrera.cs">
       <DependentUpon>DBHorario.tt</DependentUpon>

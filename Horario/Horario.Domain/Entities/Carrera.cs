@@ -15,7 +15,8 @@ namespace Horario.Domain.Entities
     public partial class Carrera
     {
         public string Nomina { get; set; }
-        public string Carrera1 { get; set; }
+        public string NombreCarrera { get; set; }
+        public string Siglas { get; set; }
     
         public virtual Dica Dica { get; set; }
     }

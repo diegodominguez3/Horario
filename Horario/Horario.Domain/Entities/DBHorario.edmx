@@ -7,11 +7,11 @@
     <Schema Namespace="HorarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Carrera">
           <Key>
-            <PropertyRef Name="Nomina" />
-            <PropertyRef Name="Carrera" />
+            <PropertyRef Name="Siglas" />
           </Key>
           <Property Name="Nomina" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Carrera" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NombreCarrera" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Siglas" Type="char" MaxLength="4" Nullable="false" />
         </EntityType>
         <EntityType Name="Cita">
           <Key>
@@ -143,12 +143,12 @@
       <Schema Namespace="HorarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Carrera">
           <Key>
-            <PropertyRef Name="Nomina" />
-            <PropertyRef Name="Carrera1" />
+            <PropertyRef Name="Siglas" />
           </Key>
           <Property Name="Nomina" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Carrera1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Dica" Relationship="Self.FK_Carrera_Dica" FromRole="Carrera" ToRole="Dica" />
+          <Property Name="NombreCarrera" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Siglas" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="Cita">
           <Key>
@@ -290,8 +290,9 @@
           <EntitySetMapping Name="Carreras">
             <EntityTypeMapping TypeName="HorarioModel.Carrera">
               <MappingFragment StoreEntitySet="Carrera">
+                <ScalarProperty Name="Siglas" ColumnName="Siglas" />
+                <ScalarProperty Name="NombreCarrera" ColumnName="NombreCarrera" />
                 <ScalarProperty Name="Nomina" ColumnName="Nomina" />
-                <ScalarProperty Name="Carrera1" ColumnName="Carrera" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

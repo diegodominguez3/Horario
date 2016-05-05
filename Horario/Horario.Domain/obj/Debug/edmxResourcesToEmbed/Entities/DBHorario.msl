@@ -4,8 +4,9 @@
     <EntitySetMapping Name="Carreras">
       <EntityTypeMapping TypeName="HorarioModel.Carrera">
         <MappingFragment StoreEntitySet="Carrera">
+          <ScalarProperty Name="Siglas" ColumnName="Siglas" />
+          <ScalarProperty Name="NombreCarrera" ColumnName="NombreCarrera" />
           <ScalarProperty Name="Nomina" ColumnName="Nomina" />
-          <ScalarProperty Name="Carrera1" ColumnName="Carrera" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

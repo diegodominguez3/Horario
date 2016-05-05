@@ -32,6 +32,7 @@ namespace EgelTraining.WebUI.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IDicaRepository>().To<EFDicaRepository>();
+            kernel.Bind<ICarreraRepository>().To<EFCarreraRepository>();
             //////////////aquí volveremos a cada rato
         }
 
