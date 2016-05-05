@@ -23,6 +23,7 @@ namespace Horario.Domain.Entities
         public string Correo { get; set; }
         public string Fname { get; set; }
         public string Lname { get; set; }
+        public string Telefono { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cita> Citas { get; set; }

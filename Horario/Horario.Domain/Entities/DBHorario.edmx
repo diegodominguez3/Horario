@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HorarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="HorarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Carrera">
           <Key>
             <PropertyRef Name="Nomina" />
@@ -52,6 +52,7 @@
           <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Fname" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Lname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefono" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -135,8 +136,7 @@
             <End Role="Horario" EntitySet="Horario" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HorarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -195,6 +195,7 @@
           <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Citas" Relationship="Self.FK_Cita_Persona" FromRole="Persona" ToRole="Cita" />
+          <Property Name="Telefono" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -329,6 +330,7 @@
           <EntitySetMapping Name="Personas">
             <EntityTypeMapping TypeName="HorarioModel.Persona">
               <MappingFragment StoreEntitySet="Persona">
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="Correo" ColumnName="Correo" />
                 <ScalarProperty Name="Fname" ColumnName="Fname" />
                 <ScalarProperty Name="Lname" ColumnName="Lname" />

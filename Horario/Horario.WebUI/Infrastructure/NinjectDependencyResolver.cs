@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Ninject;
+using Horario.Domain.Abstract;
+using Horario.Domain.Concrete;
+
 
 namespace EgelTraining.WebUI.Infrastructure
 {
@@ -28,6 +31,7 @@ namespace EgelTraining.WebUI.Infrastructure
 
         private void AddBindings()
         {
+            kernel.Bind<IDicaRepository>().To<EFDicaRepository>();
             //////////////aquí volveremos a cada rato
         }
 

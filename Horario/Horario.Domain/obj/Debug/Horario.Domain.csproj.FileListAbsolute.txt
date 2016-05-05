@@ -16,3 +16,26 @@ C:\Users\Diego\Documents\Visual Studio 2015\Projects\Horario\Horario.Domain\bin\
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\Horario\Horario.Domain\obj\Debug\Horario.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\Horario\Horario.Domain\obj\Debug\Horario.Domain.dll
 C:\Users\Diego\Documents\Visual Studio 2015\Projects\Horario\Horario.Domain\obj\Debug\Horario.Domain.pdb
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\obj\Debug\Horario.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\obj\Debug\Horario.Domain.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\obj\Debug\Horario.Domain.pdb
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\Horario.Domain.dll.config
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\Horario.Domain.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\Horario.Domain.pdb
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.Helpers.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.Mvc.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.Razor.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.WebPages.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.Helpers.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.Mvc.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.Razor.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.WebPages.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.Domain\bin\Debug\System.Web.WebPages.Razor.xml

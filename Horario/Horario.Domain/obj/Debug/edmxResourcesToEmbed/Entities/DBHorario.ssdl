@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HorarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Carrera">
+    <Key>
+      <PropertyRef Name="Nomina" />
+      <PropertyRef Name="Carrera" />
+    </Key>
+    <Property Name="Nomina" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Carrera" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cita">
+    <Key>
+      <PropertyRef Name="Folio" />
+    </Key>
+    <Property Name="Folio" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nomina" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora_Inicio" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Hora_Fin" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Dica">
+    <Key>
+      <PropertyRef Name="Nomina" />
+    </Key>
+    <Property Name="Nomina" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Lname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="No_Oficina" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Imagen" Type="image" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Horario">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Nomia" />
+    </Key>
+    <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nomia" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Hora_Inicio" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Hora_Fin" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="Correo" />
+    </Key>
+    <Property Name="Correo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Lname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefono" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Carrera_Dica">
+    <End Role="Dica" Type="Self.Dica" Multiplicity="1" />
+    <End Role="Carrera" Type="Self.Carrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dica">
+        <PropertyRef Name="Nomina" />
+      </Principal>
+      <Dependent Role="Carrera">
+        <PropertyRef Name="Nomina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cita_Dica">
+    <End Role="Dica" Type="Self.Dica" Multiplicity="1" />
+    <End Role="Cita" Type="Self.Cita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dica">
+        <PropertyRef Name="Nomina" />
+      </Principal>
+      <Dependent Role="Cita">
+        <PropertyRef Name="Nomina" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cita_Persona">
+    <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+    <End Role="Cita" Type="Self.Cita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Correo" />
+      </Principal>
+      <Dependent Role="Cita">
+        <PropertyRef Name="Correo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horario_Dica">
+    <End Role="Dica" Type="Self.Dica" Multiplicity="1" />
+    <End Role="Horario" Type="Self.Horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dica">
+        <PropertyRef Name="Nomina" />
+      </Principal>
+      <Dependent Role="Horario">
+        <PropertyRef Name="Nomia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HorarioModelStoreContainer">
+    <EntitySet Name="Carrera" EntityType="Self.Carrera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cita" EntityType="Self.Cita" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dica" EntityType="Self.Dica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Horario" EntityType="Self.Horario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persona" EntityType="Self.Persona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Carrera_Dica" Association="Self.FK_Carrera_Dica">
+      <End Role="Dica" EntitySet="Dica" />
+      <End Role="Carrera" EntitySet="Carrera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cita_Dica" Association="Self.FK_Cita_Dica">
+      <End Role="Dica" EntitySet="Dica" />
+      <End Role="Cita" EntitySet="Cita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cita_Persona" Association="Self.FK_Cita_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Cita" EntitySet="Cita" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horario_Dica" Association="Self.FK_Horario_Dica">
+      <End Role="Dica" EntitySet="Dica" />
+      <End Role="Horario" EntitySet="Horario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

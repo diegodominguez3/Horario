@@ -1,0 +1,16 @@
+﻿@model Horario.Domain.Concrete.EFDicaRepository
+
+@{
+    ViewBag.Title = "List";
+}
+
+@foreach (var dica in Model.Dicas)
+{
+    <div>
+        <h3>@dica.Nomina</h3>
+        @dica.Fname
+        @dica.Lname
+    </div>
+}
+
+
