@@ -7,15 +7,15 @@ using Horario.Domain.Abstract;
 
 namespace Horario.WebUI.Controllers
 {
-    public class DicaController : Controller
+    public class PersonaController : Controller
     {
 
-        private IDicaRepository repository;
+        private IPersonaRepository repository;
 
 
-        public DicaController(IDicaRepository dicaRepository)
+        public PersonaController(IPersonaRepository repo)
         {
-            repository = dicaRepository;
+            repository = repo;
         }
 
         public ViewResult List()

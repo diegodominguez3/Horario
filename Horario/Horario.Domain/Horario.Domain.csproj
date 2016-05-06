@@ -83,9 +83,13 @@
     <Compile Include="Abstract\ICarreraRepository.cs" />
     <Compile Include="Abstract\ICitaRepository.cs" />
     <Compile Include="Abstract\IDicaRepository.cs" />
+    <Compile Include="Abstract\IHorarioRepository.cs" />
+    <Compile Include="Abstract\IPersonaRepository.cs" />
     <Compile Include="Concrete\EFCarreraRepository.cs" />
     <Compile Include="Concrete\EFCitaRepository.cs" />
     <Compile Include="Concrete\EFDicaRepository.cs" />
+    <Compile Include="Concrete\EFHorarioRepository.cs" />
+    <Compile Include="Concrete\EFPersonaRepository.cs" />
     <Compile Include="Entities\Carrera.cs">
       <DependentUpon>DBHorario.tt</DependentUpon>
     </Compile>
