@@ -1,7 +1,7 @@
 ﻿@model Horario.Domain.Concrete.EFDicaRepository
 
 @{
-    ViewBag.Title = "Director de Carrera";
+    ViewBag.Title = "Directores de Carrera";
 }
 
 @foreach (var dica in Model.Dicas)
@@ -13,9 +13,13 @@
         </h3>
         <span class="lead">@dica.email</span>
         <div>
-            <center><a style="color:black" href="#" class="btn btn-primary btn-lg" role="button">Ver Horario</a></center>
-            <div><br /></div>
-            <center><a style="color:black" href="/Cita/Index" class="btn btn-primary btn-lg" role="button">Citas</a></center>
+            <div class="row">
+                <div class="col-lg-2"><center><a style="color:black" href="#" class="btn btn-primary btn-lg" role="button">Ver Horario</a></center></div>
+                <div class="col-lg-1"><center><a style="color:black" href="/Cita/Index" class="btn btn-primary btn-lg" role="button">Ver Citas</a></center></div>
+                <div class="col-lg-2"><center><a style="color:black" href="/Cita/Edit" class="btn btn-primary btn-lg" role="button">Crear Citas</a></center></div>
+            </div>
+            <div><br /></div>      
+            
         </div>
     </div>
 }

@@ -23,4 +23,5 @@ namespace Horario.WebUI.Controllers
             return View(repository);
         }
     }
+
 }
