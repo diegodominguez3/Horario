@@ -9,30 +9,59 @@ namespace Horario.WebUI.Controllers
     public class CitaController : Controller
     {
         private ICitaRepository repository;
-
         public CitaController(ICitaRepository repo)
         {
             repository = repo;
+
+        }
+
+        public ViewResult List()
+        {
+            return View(repository);
         }
 
         public ViewResult Index()
         {
             return View(repository.Citas);
         }
-        public ViewResult Edit(string nomina , string folio,  string date, string startTime, string endTime, string correo)
+
+        public ViewResult Edit(string nomina, string correo)
         {
-            Cita c = new Cita();
-            nomina = c.Nomina;
-            folio = c.Folio;
-
-
-            DicaViewModel model = new DicaViewModel
-            {
-                
-                CitaViewModel = new CitaViewModel { Nomina = nomina, Folio = folio, DateStr = date, Start_Time = startTime, End_Time = endTime, Correo = correo}
-            };
-            return View(model); 
+            Cita cita = repository.Citas.FirstOrDefault(c => c.Nomina == nomina);
+            return View(cita);
         }
+
+        [HttpPost]
+        public ActionResult Edit(Cita cita)
+        {
+            if (ModelState.IsValid)
+            {
+                repository.SaveCita(cita);
+                TempData["message"] = string.Format("{0} salvado correctamente", cita.Folio);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(cita);
+            }
+        }
+        public ViewResult Create()
+        {
+
+            return View("Edit", new Cita());
+        }
+
+        [HttpPost]
+        public ActionResult Delete(string folio)
+        {
+            Cita deletedCita = repository.DeleteCita(folio);
+            if (deletedCita != null)
+            {
+                TempData["message"] = string.Format("{0} fue borrado", deletedCita.Folio);
+            }
+            return RedirectToAction("Index");
+        }
+
     }
 }
 

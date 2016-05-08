@@ -13,6 +13,7 @@ namespace Horario.Domain.Concrete
         {
             get { return context.Citas; }
         }
+    
 
         public void SaveCita(Cita cita) // si le da RC-> Go to Definition (F12) puede ver la definición de la clase
         {

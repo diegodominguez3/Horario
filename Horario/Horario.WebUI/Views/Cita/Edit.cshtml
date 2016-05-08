@@ -1,9 +1,31 @@
-﻿@model Horario.WebUI.Models.DicaViewModel
-
+﻿@model Horario.Domain.Entities.Cita
 @{
-    ViewBag.Title = "Crear cita";
+    
+    ViewBag.Title = "Edit" + Model.Nomina;
+
 }
 
-<h1>Crear Cita con: "Nombre del dica" (implementar en controller)</h1>
-}
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Crear cita</h3>
+    </div>
 
+    @using (Html.BeginForm("Edit", "Cita"))
+    {
+        <div class="panel-body">
+            <h3>Folio</h3>@Html.TextBox("Folio", null, new { @class = "form-control" })
+           <h3>Dica</h3> @Html.TextBox("Nomina", null, new { @class = "form-control" })
+           <h4>Correo</h4> @Html.TextBox("Correo", null, new { @class = "form-control"})
+           <h4>fecha</h4> @Html.TextBox("Fecha", null, new { @class = "form-control"})<p style="color:gray">(formato: yyyy/mm/dd)</p>
+            <h4>Hora inicio</h4> @Html.TextBox("Hora_Inicio", null, new { @class = "form-control" })<br />
+            <h4>Hora fin </h4> @Html.TextBox("Hora_Fin", null, new { @class = "form-control" })<br />
+
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            @Html.ActionLink("Cancelar y regresar citas", "Index", null, new { @class = "btn btn-default" })
+        </div>
+
+    }
+
+</div>

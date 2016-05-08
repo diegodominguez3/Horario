@@ -13,6 +13,7 @@
         <table class="table table-striped table-condensed table-bordered">
             <tr>
                 <th class="text-right">Cita</th>
+                <th class="text-right">Dica</th>
                 <th>Persona</th>
                 <th class="text-center">Actions</th>
             </tr>
@@ -20,7 +21,9 @@
             {
                 <tr>
                     <td class="text-right">@cita.Folio</td>
+                    <td class="text-right">@cita.Nomina</td>
                     <td>@Html.ActionLink(cita.Correo, "Editar", new { cita.Folio })</td>
+                    
                     <td class="text-center">
                         @using (Html.BeginForm("Delete", "Cita"))
                         {

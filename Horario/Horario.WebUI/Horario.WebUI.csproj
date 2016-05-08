@@ -171,7 +171,9 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
@@ -181,6 +183,7 @@
     <Compile Include="Controllers\DicaController.cs" />
     <Compile Include="Controllers\HorarioController.cs" />
     <Compile Include="Controllers\PersonaController.cs" />
+    <Compile Include="Controllers\ViewCitasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,8 +195,7 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\CitaViewModel.cs" />
-    <Compile Include="Models\DicaViewModel.cs" />
+    <Compile Include="Models\ViewCitas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +211,7 @@
     <Content Include="Views\Shared\_CitasLayout.cshtml" />
     <Content Include="Views\Cita\Index.cshtml" />
     <Content Include="Views\Cita\Edit.cshtml" />
+    <Content Include="Views\Cita\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -219,8 +222,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Carrera\" />
+    <Folder Include="Views\Default\" />
     <Folder Include="Views\Horario\" />
     <Folder Include="Views\Persona\" />
+    <Folder Include="Views\ViewHorario\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Horario.Domain\Horario.Domain.csproj">
