@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="30a077ff4aeb42d19c4e959987c4f74b" Name="Diagram1">
-        <EntityTypeShape EntityType="HorarioModel.Carrera" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="HorarioModel.Cita" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="HorarioModel.Dica" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="HorarioModel.Horario" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HorarioModel.Persona" Width="1.5" PointX="3.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="HorarioModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="f083bfd7e92f4c4f99ff750c355143db" Name="Diagram1">
+        <EntityTypeShape EntityType="HorarioModel.Carrera" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorarioModel.Cita" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorarioModel.Dica" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorarioModel.Horario" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorarioModel.Persona" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorarioModel.sysdiagram" Width="1.5" PointX="5.75" PointY="2.25" IsExpanded="true" />
         <AssociationConnector Association="HorarioModel.FK_Carrera_Dica" ManuallyRouted="false" />
         <AssociationConnector Association="HorarioModel.FK_Cita_Dica" ManuallyRouted="false" />
         <AssociationConnector Association="HorarioModel.FK_Cita_Persona" ManuallyRouted="false" />

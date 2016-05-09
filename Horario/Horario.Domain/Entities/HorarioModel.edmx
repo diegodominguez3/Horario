@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="HorarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="HorarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Carrera">
           <Key>
             <PropertyRef Name="Siglas" />
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="Folio" />
           </Key>
-          <Property Name="Folio" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Folio" Type="int" Nullable="false" />
           <Property Name="Nomina" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Fecha" Type="date" Nullable="false" />
           <Property Name="Hora_Inicio" Type="time" Precision="7" Nullable="false" />
@@ -137,7 +137,8 @@
             <End Role="Horario" EntitySet="Horario" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HorarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -146,15 +147,15 @@
             <PropertyRef Name="Siglas" />
           </Key>
           <Property Name="Nomina" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NombreCarrera" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Siglas" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Dica" Relationship="Self.FK_Carrera_Dica" FromRole="Carrera" ToRole="Dica" />
-          <Property Name="NombreCarrera" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Siglas" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="Cita">
           <Key>
             <PropertyRef Name="Folio" />
           </Key>
-          <Property Name="Folio" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="Folio" Type="Int32" Nullable="false" />
           <Property Name="Nomina" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Hora_Inicio" Type="Time" Nullable="false" Precision="7" />
@@ -172,10 +173,10 @@
           <Property Name="Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="No_Oficina" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Carreras" Relationship="Self.FK_Carrera_Dica" FromRole="Dica" ToRole="Carrera" />
           <NavigationProperty Name="Citas" Relationship="Self.FK_Cita_Dica" FromRole="Dica" ToRole="Cita" />
           <NavigationProperty Name="Horarios" Relationship="Self.FK_Horario_Dica" FromRole="Dica" ToRole="Horario" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Horario">
           <Key>
@@ -196,8 +197,8 @@
           <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Citas" Relationship="Self.FK_Cita_Persona" FromRole="Persona" ToRole="Cita" />
-          <Property Name="Telefono" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -290,9 +291,9 @@
           <EntitySetMapping Name="Carreras">
             <EntityTypeMapping TypeName="HorarioModel.Carrera">
               <MappingFragment StoreEntitySet="Carrera">
-                <ScalarProperty Name="Siglas" ColumnName="Siglas" />
-                <ScalarProperty Name="NombreCarrera" ColumnName="NombreCarrera" />
                 <ScalarProperty Name="Nomina" ColumnName="Nomina" />
+                <ScalarProperty Name="NombreCarrera" ColumnName="NombreCarrera" />
+                <ScalarProperty Name="Siglas" ColumnName="Siglas" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -311,12 +312,12 @@
           <EntitySetMapping Name="Dicas">
             <EntityTypeMapping TypeName="HorarioModel.Dica">
               <MappingFragment StoreEntitySet="Dica">
-                <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="Nomina" ColumnName="Nomina" />
                 <ScalarProperty Name="Fname" ColumnName="Fname" />
                 <ScalarProperty Name="Lname" ColumnName="Lname" />
                 <ScalarProperty Name="No_Oficina" ColumnName="No_Oficina" />
                 <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="email" ColumnName="email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -334,10 +335,10 @@
           <EntitySetMapping Name="Personas">
             <EntityTypeMapping TypeName="HorarioModel.Persona">
               <MappingFragment StoreEntitySet="Persona">
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="Correo" ColumnName="Correo" />
                 <ScalarProperty Name="Fname" ColumnName="Fname" />
                 <ScalarProperty Name="Lname" ColumnName="Lname" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

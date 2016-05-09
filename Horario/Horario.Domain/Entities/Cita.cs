@@ -14,7 +14,7 @@ namespace Horario.Domain.Entities
     
     public partial class Cita
     {
-        public string Folio { get; set; }
+        public int Folio { get; set; }
         public string Nomina { get; set; }
         public System.DateTime Fecha { get; set; }
         public System.TimeSpan Hora_Inicio { get; set; }

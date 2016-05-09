@@ -91,67 +91,67 @@
     <Compile Include="Concrete\EFHorarioRepository.cs" />
     <Compile Include="Concrete\EFPersonaRepository.cs" />
     <Compile Include="Entities\Carrera.cs">
-      <DependentUpon>DBHorario.tt</DependentUpon>
+      <DependentUpon>HorarioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Cita.cs">
-      <DependentUpon>DBHorario.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\DBHorario.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBHorario.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\DBHorario.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBHorario.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\DBHorario.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBHorario.edmx</DependentUpon>
+      <DependentUpon>HorarioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Dica.cs">
-      <DependentUpon>DBHorario.tt</DependentUpon>
+      <DependentUpon>HorarioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Horario.cs">
-      <DependentUpon>DBHorario.tt</DependentUpon>
+      <DependentUpon>HorarioModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HorarioModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HorarioModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HorarioModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HorarioModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HorarioModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HorarioModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Persona.cs">
-      <DependentUpon>DBHorario.tt</DependentUpon>
+      <DependentUpon>HorarioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\sysdiagram.cs">
-      <DependentUpon>DBHorario.tt</DependentUpon>
+      <DependentUpon>HorarioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Entities\DBHorario.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBHorario.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="Entities\DBHorario.edmx.diagram">
-      <DependentUpon>DBHorario.edmx</DependentUpon>
+    <EntityDeploy Include="Entities\HorarioModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HorarioModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\HorarioModel.edmx.diagram">
+      <DependentUpon>HorarioModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Entities\DBHorario.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBHorario.edmx</DependentUpon>
-      <LastGenOutput>DBHorario.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Entities\DBHorario.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBHorario.edmx</DependentUpon>
-      <LastGenOutput>DBHorario.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Entities\HorarioModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HorarioModel.edmx</DependentUpon>
+      <LastGenOutput>HorarioModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\HorarioModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HorarioModel.edmx</DependentUpon>
+      <LastGenOutput>HorarioModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
