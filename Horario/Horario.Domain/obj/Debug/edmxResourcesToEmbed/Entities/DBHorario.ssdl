@@ -5,7 +5,7 @@
       <PropertyRef Name="Siglas" />
     </Key>
     <Property Name="Nomina" Type="nchar" MaxLength="10" Nullable="false" />
-    <Property Name="NombreCarrera" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NombreCarrera" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Siglas" Type="char" MaxLength="4" Nullable="false" />
   </EntityType>
   <EntityType Name="Cita">
@@ -28,7 +28,7 @@
     <Property Name="Lname" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="No_Oficina" Type="char" MaxLength="2" Nullable="false" />
     <Property Name="Imagen" Type="image" />
-    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Horario">
     <Key>

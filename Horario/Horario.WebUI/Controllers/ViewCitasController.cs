@@ -5,22 +5,23 @@ using System.Web;
 using System.Web.Mvc;
 using Horario.Domain.Entities;
 using Horario.Domain.Abstract;
+using Horario.WebUI.Models; 
 
 
 namespace Horario.WebUI.Controllers
 {
     public class ViewCitasController : Controller
     {
-        private IDicaRepository repository;
+        private ViewCitas repository;
 
-        public ViewCitasController(IDicaRepository repo)
+        public ViewCitasController(ViewCitas repo)
         {
             repository = repo;
         }
         // GET: ViewHorario
         public ActionResult Index()
         {
-            return View();
+            return View(repository);
         }
     }
 }

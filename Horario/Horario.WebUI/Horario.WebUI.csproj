@@ -212,6 +212,7 @@
     <Content Include="Views\Cita\Index.cshtml" />
     <Content Include="Views\Cita\Edit.cshtml" />
     <Content Include="Views\Cita\List.cshtml" />
+    <Content Include="Views\ViewCitas\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

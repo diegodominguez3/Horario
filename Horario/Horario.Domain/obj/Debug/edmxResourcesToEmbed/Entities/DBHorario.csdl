@@ -6,14 +6,14 @@
     </Key>
     <Property Name="Nomina" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Dica" Relationship="Self.FK_Carrera_Dica" FromRole="Carrera" ToRole="Dica" />
-    <Property Name="NombreCarrera" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NombreCarrera" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Siglas" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="Cita">
     <Key>
       <PropertyRef Name="Folio" />
     </Key>
-    <Property Name="Folio" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Folio" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
     <Property Name="Nomina" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Hora_Inicio" Type="Time" Nullable="false" Precision="7" />
@@ -34,7 +34,7 @@
     <NavigationProperty Name="Carreras" Relationship="Self.FK_Carrera_Dica" FromRole="Dica" ToRole="Carrera" />
     <NavigationProperty Name="Citas" Relationship="Self.FK_Cita_Dica" FromRole="Dica" ToRole="Cita" />
     <NavigationProperty Name="Horarios" Relationship="Self.FK_Horario_Dica" FromRole="Dica" ToRole="Horario" />
-    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
   <EntityType Name="Horario">
     <Key>

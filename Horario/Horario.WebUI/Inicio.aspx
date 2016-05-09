@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div>
      <center><h1>Bienvenido al servicio de citas del Tec</h1></center>
-     <center><a style="color:black" href= "Dica\List" class="btn btn-primary btn-lg" role="button">Consultar director de Carrera</a></center>
+        <center><a style="color:black" href= "ViewCitas/Index" class="btn btn-primary btn-lg" role="button">Ver directores de carrera</a></center>
     </div>
     </form>
 </body>
