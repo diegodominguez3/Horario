@@ -113,3 +113,7 @@ C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\EntityFramework.xm
 C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\EntityFramework.SqlServer.dll
 C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\EntityFramework.SqlServer.xml
 C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\MvcSchedule.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Diego\Source\Repos\Horario\Horario\Horario.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml

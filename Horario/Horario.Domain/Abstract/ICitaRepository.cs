@@ -8,7 +8,7 @@ namespace Horario.Domain.Abstract
     {
         IEnumerable<Cita> Citas { get; }
         void SaveCita(Cita cita); 
-        Cita DeleteCita(string ID);
+        Cita DeleteCita(int ID);
     }
 }
 

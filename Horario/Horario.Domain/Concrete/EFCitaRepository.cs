@@ -17,27 +17,36 @@ namespace Horario.Domain.Concrete
 
         public void SaveCita(Cita cita) // si le da RC-> Go to Definition (F12) puede ver la definición de la clase
         {
-            Cita dbEntry = context.Citas.Find(cita.Folio);
+            // Cita dbEntry = context.Citas;
+            Cita dbEntry = new Cita() ;
 
-            if (dbEntry != null) //Si encontró la cita, actualiza los datos
-            {
-                dbEntry.Nomina = cita.Nomina;
-                dbEntry.Fecha = cita.Fecha;
-                dbEntry.Hora_Inicio = cita.Hora_Inicio;
-                dbEntry.Hora_Fin = cita.Hora_Fin;
-                dbEntry.Correo = cita.Correo; 
+            dbEntry.Nomina = cita.Nomina;
+            dbEntry.Fecha = cita.Fecha;
+            dbEntry.Hora_Inicio = cita.Hora_Inicio;
+            dbEntry.Hora_Fin = cita.Hora_Fin;
+            dbEntry.Correo = cita.Correo;
 
-            }
-            else //de lo contrario, lo añade
-            {
-                
-                context.Citas.Add(cita);
-            }
+            context.Citas.Add(dbEntry); 
+
+            /* if (dbEntry != null) //Si encontró la cita, actualiza los datos
+             {
+                 dbEntry.Nomina = cita.Nomina;
+                 dbEntry.Fecha = cita.Fecha;
+                 dbEntry.Hora_Inicio = cita.Hora_Inicio;
+                 dbEntry.Hora_Fin = cita.Hora_Fin;
+                 dbEntry.Correo = cita.Correo; 
+
+             }
+             else //de lo contrario, lo añade
+             {
+
+                 context.Citas.Add(cita);
+             }*/
             context.SaveChanges();
         }
 
 
-        public Cita DeleteCita(string folio)
+        public Cita DeleteCita(int folio)
         {
             Cita dbEntry = context.Citas.Find(folio);
             if (dbEntry != null)
