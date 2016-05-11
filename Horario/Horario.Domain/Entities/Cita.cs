@@ -11,10 +11,16 @@ namespace Horario.Domain.Entities
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+
     public partial class Cita
     {
+        
+        [Key][DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         public int Folio { get; set; }
+
         public string Nomina { get; set; }
         public System.DateTime Fecha { get; set; }
         public System.TimeSpan Hora_Inicio { get; set; }

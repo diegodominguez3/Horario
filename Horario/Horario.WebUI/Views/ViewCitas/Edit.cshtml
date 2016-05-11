@@ -1,0 +1,54 @@
+﻿@model Horario.Domain.Entities.Cita
+@{
+
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CitasLayout.cshtml";
+
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Crear cita</h3>
+    </div>
+
+    @using (Html.BeginForm("Edit", "Cita"))
+    {
+        <div class="panel-body">
+            <h3>Folio  @Model.Folio</h3>
+            <h3>Dica</h3> @Html.TextBox("Nomina", null, new { @class = "form-control" })
+            <h4>Correo</h4> @Html.TextBox("Correo", null, new { @class = "form-control" })
+            <h4>fecha</h4><input type="date" name="Fecha" class="form-control"/ ><p style="color:gray">(formato: yyyy/mm/dd)</p>
+            <h4>Hora inicio</h4><select name="Hora_Inicio" class="form-control">
+                <option value="09:00:00">9 AM</option>
+                <option value="10:00:00">10 AM</option>
+                <option value="11:00:00">11 AM</option>
+                <option value="12:00:00">11 PM</option>
+                <option value="13:00:00">1 PM</option>
+                <option value="14:00:00">2 PM</option>
+                <option value="15:00:00">3 PM</option>
+                <option value="16:00:00">4 PM</option>
+                <option value="17:00:00">5 PM</option>
+            </select>
+            <br />
+            <h4>Hora fin </h4><select name="Hora_Inicio" class="form-control">
+                <option value="09:00:00">9 AM</option>
+                <option value="10:00:00">10 AM</option>
+                <option value="11:00:00">11 AM</option>
+                <option value="12:00:00">11 PM</option>
+                <option value="13:00:00">1 PM</option>
+                <option value="14:00:00">2 PM</option>
+                <option value="15:00:00">3 PM</option>
+                <option value="16:00:00">4 PM</option>
+                <option value="17:00:00">5 PM</option>
+            </select>
+            <br />
+
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            @Html.ActionLink("Cancelar y regresar", "Index", null, new { @class = "btn btn-default" })
+        </div>
+
+    }
+
+</div>

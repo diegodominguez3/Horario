@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Panel de Citas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="panel panel-default">
@@ -15,29 +16,20 @@
                 <th class="text-right">Cita</th>
                 <th class="text-right">Dica</th>
                 <th>Persona</th>
-                <th class="text-center">Actions</th>
             </tr>
             @foreach (var cita in Model)
             {
                 <tr>
                     <td class="text-right">@cita.Folio</td>
                     <td class="text-right">@cita.Nomina</td>
-                    <td>@Html.ActionLink(cita.Correo, "Editar", new { cita.Folio })</td>
-                    
-                    <td class="text-center">
-                        @using (Html.BeginForm("Delete", "Cita"))
-                        {
-                            @Html.Hidden("Folio", cita.Folio)
-                            <input type="submit" class="btn btn-default btn-xs" value="Delete" />
-                        }
-
-                    </td>
-                </tr>
+                    <td>@cita.Correo</td>
+                   
+                   </tr>
             }
         </table>
     </div>
 
     <div class="panel-footer">
-        @Html.ActionLink("Crear Cita", "Create", null, new { @class = "btn btn-default" })
+        @Html.ActionLink("Crear Cita", "Create", null, new { @class = "btn btn-default"})
     </div>
 </div>

@@ -51,16 +51,11 @@ namespace Horario.WebUI.Controllers
             return View("Edit", new Cita());
         }
 
-        [HttpPost]
-        public ActionResult Delete(string folio)
+        public ViewResult Calendario()
         {
-            Cita deletedCita = repository.DeleteCita(folio);
-            if (deletedCita != null)
-            {
-                TempData["message"] = string.Format("{0} fue borrado", deletedCita.Folio);
-            }
-            return RedirectToAction("Index");
+            return View(repository);
         }
+
 
     }
 }

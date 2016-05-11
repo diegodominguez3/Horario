@@ -1,0 +1,22 @@
+﻿@model Horario.Domain.Concrete.EFCitaRepository
+@using MvcSchedule;
+@using MvcSchedule.Objects;
+@{
+    ViewBag.Title = "Calendario";
+}
+
+<div>
+    @Html.ScheduleCalendarFor(Model.Citas,
+                             m => m.Hora_Inicio,
+                             m => m.Hora_Fin,
+                             m => m.Fecha,
+                             m => "Cita",
+                             new MvcScheduleCalendarOptions
+                             {
+                                 Layout = LayoutEnum.Vertical,
+                                 ItemCss = "item"
+                             },
+                             t => ((DateTime)t).ToString("hh:mm"),
+                             d => ((DateTime)d).ToString("dd/MM"))
+</div>
+

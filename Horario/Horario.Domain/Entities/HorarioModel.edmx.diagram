@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f083bfd7e92f4c4f99ff750c355143db" Name="Diagram1">
+      <Diagram DiagramId="9d3aa39c87784282ab19ec1a93b903eb" Name="Diagram1">
         <EntityTypeShape EntityType="HorarioModel.Carrera" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="HorarioModel.Cita" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HorarioModel.Dica" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />

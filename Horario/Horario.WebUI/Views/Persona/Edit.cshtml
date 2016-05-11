@@ -1,0 +1,30 @@
+﻿@model Horario.Domain.Entities.Persona
+
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_CitasLayout.cshtml";
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3>Registro</h3>
+    </div>
+
+    @using (Html.BeginForm("Edit", "Persona"))
+    {
+        <div class="panel-body">
+            <h3>correo</h3> @Html.TextBox("Correo", null, new { @class = "form-control" })
+            <h4>Nombre</h4> @Html.TextBox("Fname", null, new { @class = "form-control" })
+            <h4>Apellido</h4> @Html.TextBox("Lname", null, new { @class = "form-control" })
+            <h4>Telefono</h4> @Html.TextBox("Telefono", null, new { @class = "form-control" })<br />
+        </div>
+        <div class="panel-footer">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            @Html.ActionLink("Cancelar y regresar", "Index", null, new { @class = "btn btn-default" })
+        </div>
+
+    }
+
+</div>
+
+

@@ -11,7 +11,6 @@ namespace Horario.WebUI.Models
         public IEnumerable<Cita> Citas { get; set; }
         public IEnumerable<Persona> Personas { get; set; }
         public IEnumerable<Carrera> Carreras { get; set; }
-
         public List<IEnumerable<Object>> DarCita = new List<IEnumerable<Object>>(); 
         public ViewCitas()
         {

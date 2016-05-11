@@ -21,7 +21,6 @@ namespace Horario.Domain.Concrete
 
             if (dbEntry != null) //Si encontró la cita, actualiza los datos
             {
-                dbEntry.Folio = cita.Folio;
                 dbEntry.Nomina = cita.Nomina;
                 dbEntry.Fecha = cita.Fecha;
                 dbEntry.Hora_Inicio = cita.Hora_Inicio;
@@ -31,6 +30,7 @@ namespace Horario.Domain.Concrete
             }
             else //de lo contrario, lo añade
             {
+                
                 context.Citas.Add(cita);
             }
             context.SaveChanges();
@@ -47,5 +47,7 @@ namespace Horario.Domain.Concrete
             }
             return dbEntry;
         }
+
+
     }
 }

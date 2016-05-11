@@ -13,7 +13,7 @@
     <Key>
       <PropertyRef Name="Folio" />
     </Key>
-    <Property Name="Folio" Type="Int32" Nullable="false" />
+    <Property Name="Folio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nomina" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Hora_Inicio" Type="Time" Nullable="false" Precision="7" />
