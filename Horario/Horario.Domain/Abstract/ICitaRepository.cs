@@ -7,7 +7,8 @@ namespace Horario.Domain.Abstract
     public interface ICitaRepository
     {
         IEnumerable<Cita> Citas { get; }
-        void SaveCita(Cita cita); 
+        List<Cita> Exist(); 
+        string SaveCita(Cita cita); 
         Cita DeleteCita(int ID);
     }
 }

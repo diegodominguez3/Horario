@@ -36,15 +36,16 @@ namespace Horario.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                repository.SaveCita(cita);
-                TempData["message"] = string.Format("{0} salvado correctamente", cita.Folio);
-                return RedirectToAction("Index");
+                string mensaje = repository.SaveCita(cita);
+                TempData["message"] = string.Format(mensaje);
+                return RedirectPermanent("/ViewCitas/Index");
             }
             else
             {
                 return View(cita);
             }
         }
+        
         public ViewResult Create()
         {
 

@@ -85,31 +85,31 @@ namespace Horario.WebUI.Controllers
             {
                 if (c.Fecha.ToShortDateString() == fecha && c.Hora_Inicio == time9)
                 {
-                    day1 = "Cita con " + citas.Correo;
+                    day1 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha1 && c.Hora_Inicio == time9)
                 {
-                    day2 = "Cita con " + citas.Correo;
+                    day2 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha2 && c.Hora_Inicio == time9)
                 {
-                    day3 = "Cita con " + citas.Correo;
+                    day3 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha3 && c.Hora_Inicio == time9)
                 {
-                    day4 = "Cita con " + citas.Correo;
+                    day4 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha4 && c.Hora_Inicio == time9)
                 {
-                    day5 = "Cita con " + citas.Correo;
+                    day5 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha5 && c.Hora_Inicio == time9)
                 {
-                    day6 = "Cita con " + citas.Correo;
+                    day6 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha6 && c.Hora_Inicio == time9)
                 {
-                    day7 = "Cita con " + citas.Correo;
+                    day7 = "Cita con " + c.Correo;
                 }
             }
 
@@ -129,31 +129,31 @@ namespace Horario.WebUI.Controllers
             {
                 if (c.Fecha.ToShortDateString() == fecha && c.Hora_Inicio == time10)
                 {
-                    day1 = "Cita con " + citas.Correo;
+                    day1 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha1 && c.Hora_Inicio == time10)
                 {
-                    day2 = "Cita con " + citas.Correo;
+                    day2 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha2 && c.Hora_Inicio == time10)
                 {
-                    day3 = "Cita con " + citas.Correo;
+                    day3 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha3 && c.Hora_Inicio == time10)
                 {
-                    day4 = "Cita con " + citas.Correo;
+                    day4 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha4 && c.Hora_Inicio == time10)
                 {
-                    day5 = "Cita con " + citas.Correo;
+                    day5 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha5 && c.Hora_Inicio == time10)
                 {
-                    day6 = "Cita con " + citas.Correo;
+                    day6 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha6 && c.Hora_Inicio == time10)
                 {
-                    day7 = "Cita con " + citas.Correo;
+                    day7 = "Cita con " + c.Correo;
                 }
             }
 
@@ -173,31 +173,31 @@ namespace Horario.WebUI.Controllers
             {
                 if (c.Fecha.ToShortDateString() == fecha && c.Hora_Inicio == time11)
                 {
-                    day1 = "Cita con " + citas.Correo;
+                    day1 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha1 && c.Hora_Inicio == time11)
                 {
-                    day2 = "Cita con " + citas.Correo;
+                    day2 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha2 && c.Hora_Inicio == time11)
                 {
-                    day3 = "Cita con " + citas.Correo;
+                    day3 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha3 && c.Hora_Inicio == time11)
                 {
-                    day4 = "Cita con " + citas.Correo;
+                    day4 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha4 && c.Hora_Inicio == time11)
                 {
-                    day5 = "Cita con " + citas.Correo;
+                    day5 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha5 && c.Hora_Inicio == time11)
                 {
-                    day6 = "Cita con " + citas.Correo;
+                    day6 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha6 && c.Hora_Inicio == time11)
                 {
-                    day7 = "Cita con " + citas.Correo;
+                    day7 = "Cita con " + c.Correo;
                 }
             }
 
@@ -217,31 +217,31 @@ namespace Horario.WebUI.Controllers
             {
                 if (c.Fecha.ToShortDateString() == fecha && c.Hora_Inicio == time12)
                 {
-                    day1 = "Cita con " + citas.Correo;
+                    day1 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha1 && c.Hora_Inicio == time12)
                 {
-                    day2 = "Cita con " + citas.Correo;
+                    day2 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha2 && c.Hora_Inicio == time12)
                 {
-                    day3 = "Cita con " + citas.Correo;
+                    day3 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha3 && c.Hora_Inicio == time12)
                 {
-                    day4 = "Cita con " + citas.Correo;
+                    day4 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha4 && c.Hora_Inicio == time12)
                 {
-                    day5 = "Cita con " + citas.Correo;
+                    day5 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha5 && c.Hora_Inicio == time12)
                 {
-                    day6 = "Cita con " + citas.Correo;
+                    day6 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha6 && c.Hora_Inicio == time12)
                 {
-                    day7 = "Cita con " + citas.Correo;
+                    day7 = "Cita con " + c.Correo;
                 }
             }
 
@@ -261,31 +261,31 @@ namespace Horario.WebUI.Controllers
             {
                 if (c.Fecha.ToShortDateString() == fecha && c.Hora_Inicio == time1)
                 {
-                    day1 = "Cita con " + citas.Correo;
+                    day1 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha1 && c.Hora_Inicio == time1)
                 {
-                    day2 = "Cita con " + citas.Correo;
+                    day2 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha2 && c.Hora_Inicio == time1)
                 {
-                    day3 = "Cita con " + citas.Correo;
+                    day3 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha3 && c.Hora_Inicio == time1)
                 {
-                    day4 = "Cita con " + citas.Correo;
+                    day4 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha4 && c.Hora_Inicio == time1)
                 {
-                    day5 = "Cita con " + citas.Correo;
+                    day5 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha5 && c.Hora_Inicio == time1)
                 {
-                    day6 = "Cita con " + citas.Correo;
+                    day6 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha6 && c.Hora_Inicio == time1)
                 {
-                    day7 = "Cita con " + citas.Correo;
+                    day7 = "Cita con " + c.Correo;
                 }
             }
 
@@ -305,31 +305,31 @@ namespace Horario.WebUI.Controllers
             {
                 if (c.Fecha.ToShortDateString() == fecha && c.Hora_Inicio == time2)
                 {
-                    day1 = "Cita con " + citas.Correo;
+                    day1 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha1 && c.Hora_Inicio == time2)
                 {
-                    day2 = "Cita con " + citas.Correo;
+                    day2 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha2 && c.Hora_Inicio == time2)
                 {
-                    day3 = "Cita con " + citas.Correo;
+                    day3 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha3 && c.Hora_Inicio == time2)
                 {
-                    day4 = "Cita con " + citas.Correo;
+                    day4 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha4 && c.Hora_Inicio == time2)
                 {
-                    day5 = "Cita con " + citas.Correo;
+                    day5 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha5 && c.Hora_Inicio == time2)
                 {
-                    day6 = "Cita con " + citas.Correo;
+                    day6 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha6 && c.Hora_Inicio == time2)
                 {
-                    day7 = "Cita con " + citas.Correo;
+                    day7 = "Cita con " + c.Correo;
                 }
             }
 
@@ -349,31 +349,31 @@ namespace Horario.WebUI.Controllers
             {
                 if (c.Fecha.ToShortDateString() == fecha && c.Hora_Inicio == time3)
                 {
-                    day1 = "Cita con " + citas.Correo;
+                    day1 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha1 && c.Hora_Inicio == time3)
                 {
-                    day2 = "Cita con " + citas.Correo;
+                    day2 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha2 && c.Hora_Inicio == time3)
                 {
-                    day3 = "Cita con " + citas.Correo;
+                    day3 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha3 && c.Hora_Inicio == time3)
                 {
-                    day4 = "Cita con " + citas.Correo;
+                    day4 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha4 && c.Hora_Inicio == time3)
                 {
-                    day5 = "Cita con " + citas.Correo;
+                    day5 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha5 && c.Hora_Inicio == time3)
                 {
-                    day6 = "Cita con " + citas.Correo;
+                    day6 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha6 && c.Hora_Inicio == time3)
                 {
-                    day7 = "Cita con " + citas.Correo;
+                    day7 = "Cita con " + c.Correo;
                 }
             }
 
@@ -393,31 +393,31 @@ namespace Horario.WebUI.Controllers
             {
                 if (c.Fecha.ToShortDateString() == fecha && c.Hora_Inicio == time4)
                 {
-                    day1 = "Cita con " + citas.Correo;
+                    day1 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha1 && c.Hora_Inicio == time4)
                 {
-                    day2 = "Cita con " + citas.Correo;
+                    day2 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha2 && c.Hora_Inicio == time4)
                 {
-                    day3 = "Cita con " + citas.Correo;
+                    day3 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha3 && c.Hora_Inicio == time4)
                 {
-                    day4 = "Cita con " + citas.Correo;
+                    day4 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha4 && c.Hora_Inicio == time4)
                 {
-                    day5 = "Cita con " + citas.Correo;
+                    day5 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha5 && c.Hora_Inicio == time4)
                 {
-                    day6 = "Cita con " + citas.Correo;
+                    day6 = "Cita con " + c.Correo;
                 }
                 if (c.Fecha.ToShortDateString() == fecha6 && c.Hora_Inicio == time4)
                 {
-                    day7 = "Cita con " + citas.Correo;
+                    day7 = "Cita con " + c.Correo;
                 }
             }
 
@@ -439,9 +439,9 @@ namespace Horario.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                repoCita.SaveCita(cita);
-                TempData["message"] = string.Format("{0} salvado correctamente", cita.Folio);
-                return RedirectPermanent("ViewCitas/Index");
+                string mensaje = repoCita.SaveCita(cita);
+                TempData["message"] = string.Format(mensaje);
+                return RedirectPermanent("Citas");
             }
             else
             {
