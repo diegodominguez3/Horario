@@ -35,7 +35,7 @@ namespace EgelTraining.WebUI.Infrastructure
             kernel.Bind<ICarreraRepository>().To<EFCarreraRepository>();
             kernel.Bind<ICitaRepository>().To<EFCitaRepository>();
             kernel.Bind<IHorarioRepository>().To<EFHorarioRepository>();
-            kernel.Bind<IHorarioRepository>().To<EFHorarioRepository>();
+            kernel.Bind<IPersonaRepository>().To<EFPersonaRepository>();
             //////////////aquí volveremos a cada rato
         }
 

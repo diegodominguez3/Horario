@@ -90,6 +90,8 @@
     <Compile Include="Concrete\EFDicaRepository.cs" />
     <Compile Include="Concrete\EFHorarioRepository.cs" />
     <Compile Include="Concrete\EFPersonaRepository.cs" />
+    <Compile Include="Concrete\semana.cs" />
+    <Compile Include="Concrete\SemanaCitas.cs" />
     <Compile Include="Entities\Carrera.cs">
       <DependentUpon>HorarioModel.tt</DependentUpon>
     </Compile>

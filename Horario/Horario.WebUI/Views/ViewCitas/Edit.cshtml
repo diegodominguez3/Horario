@@ -14,8 +14,12 @@
     @using (Html.BeginForm("Edit", "Cita"))
     {
         <div class="panel-body">
-            <h3>Folio  @Model.Folio</h3>
-            <h3>Dica</h3> @Html.TextBox("Nomina", null, new { @class = "form-control" })
+            <h3>Dica</h3><select name="Nomina" class="form-control">
+                <option value="L000000001">Diego Dominguez</option>
+                <option value="L000000002">Carlos Ventura</option>
+                <option value="L000000003">Homero Gonzales</option>
+                <option value="L000000004">Luis Raul Arriola</option>
+            </select>
             <h4>Correo</h4> @Html.TextBox("Correo", null, new { @class = "form-control" })
             <h4>fecha</h4><input type="date" name="Fecha" class="form-control"/ ><p style="color:gray">(formato: yyyy/mm/dd)</p>
             <h4>Hora inicio</h4><select name="Hora_Inicio" class="form-control">

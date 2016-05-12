@@ -37,7 +37,7 @@ namespace Horario.WebUI.Controllers
             {
                 repository.SavePersona(persona);
                 TempData["message"] = string.Format("{0} salvado correctamente", persona.Correo);
-                return RedirectToAction("List");
+                return RedirectPermanent("/ViewCitas/Index");
             }
             else
             {
